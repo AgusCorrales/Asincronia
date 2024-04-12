@@ -57,7 +57,7 @@ btn.addEventListener("click", showUsers)
 //Imprimir por consola la lista de razas de todos los perros.
 
 axios.get("https://dog.ceo/api/breeds/list/all")
-.then((res)=>console.log(res.data))
+.then((res)=>console.log(res.data.message))
 .catch((err)=> console.log(err))
 
 
@@ -72,20 +72,4 @@ axios.get("https://dog.ceo/api/breed/hound/images")
 .catch((err)=>console.log(err))
 
 
-axios.get("https://dog.ceo/api/breeds/list/all")
-.then((res)=>{
-    let arrayRazas = res.data
-    arrayRazas.forEach(razas =>{
-        console.log(razas.message);
-    })
-})
-
-
-
-// function ShowDogs() {
-//     let mostrarPerros = document.getElementById("perros");
-
-
-
-    
-//  }
+ 
